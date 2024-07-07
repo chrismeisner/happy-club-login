@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+	<div id="login-container" class="p-6 bg-white rounded shadow-md w-full max-w-sm">
+		<div id="message" class="blue mb-4">Hello, please enter your mobile number to sign in to Happy Club</div>
+		
+		<input type="tel" id="phone-number" placeholder="Enter phone number" class="mb-2 p-2 border border-gray-300 rounded w-full" maxlength="10">
+		
+		<button id="login-button" class="mb-4 p-2 bg-blue-500 text-white rounded w-full">Send Code</button>
+		<div id="recaptcha-container"></div>
+		<input type="text" id="verification-code" placeholder="Enter verification code" class="mb-2 p-2 border border-gray-300 rounded w-full" style="display:none;" inputmode="numeric">
+		<button id="verify-button" class="mb-4 p-2 bg-blue-500 text-white rounded w-full" style="display:none;">Verify Code</button>
+		
+		<!-- Email login elements -->
+		<input type="email" id="email-address" placeholder="Enter email address" class="mb-2 p-2 border border-gray-300 rounded w-full">
+		<button id="email-login-button" class="mb-4 p-2 bg-blue-500 text-white rounded w-full">Email me my login link</button>
+		<div id="email-sent-message" class="hidden mt-4 text-gray-600"></div>
+
+		<button id="signout-button" class="mb-4 p-2 bg-red-500 text-white rounded w-full" style="display:none;">Sign Out</button>
+		<div id="airtable-status" class="mt-4 text-gray-600">Checking Airtable connection...</div>
+		<div id="mobile-status" class="hidden mt-2">
+			<span>Mobile: </span><span id="mobile-number">Not signed in</span>
+		</div>
+
+		<div id="profile-container" class="hidden">
+			<h1 class="text-xl font-bold mb-4">Account Page</h1>
+			<div id="user-info" class="mb-4">
+				<p><strong>Mobile:</strong> <span id="profile-mobile-number">Loading...</span></p>
+				<p><strong>Username:</strong> <span id="username">Loading...</span></p>
+				<p><strong>First Name:</strong> <span id="first-name">Loading...</span></p>
+				<p><strong>Last Name:</strong> <span id="last-name">Loading...</span></p>
+				<p><strong>Email:</strong> <span id="email">Loading...</span></p>
+				<p><strong>Member Type:</strong> <span id="member-type">Loading...</span></p>
+			</div>
+			<button id="update-profile-button" class="mb-4 p-2 bg-blue-500 text-white rounded w-full">Update Profile</button>
+
+			<!-- Services List -->
+			<h2 class="text-lg font-bold mt-8 mb-4">Services</h2>
+			<ul id="services-list" class="list-disc pl-5"></ul>
+		</div>
+
+		<!-- Logged in as section -->
+		<div id="logged-in-as" class="hidden mt-4 text-gray-600"></div>
+	</div>
+
+	<script type="module" src="app.js"></script>
+</body>
+</html>

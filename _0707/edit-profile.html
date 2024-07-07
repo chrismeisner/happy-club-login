@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Profile</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+	<div class="p-6 bg-white rounded shadow-md w-full max-w-sm">
+		<h1 class="text-xl font-bold mb-4">Edit Profile</h1>
+		<form id="edit-profile-form">
+			<label for="first-name" class="block mb-2">First Name</label>
+			<input type="text" id="first-name" class="mb-4 p-2 border border-gray-300 rounded w-full">
+
+			<label for="last-name" class="block mb-2">Last Name</label>
+			<input type="text" id="last-name" class="mb-4 p-2 border border-gray-300 rounded w-full">
+
+			<label for="email" class="block mb-2">Email Address</label>
+			<input type="email" id="email" class="mb-4 p-2 border border-gray-300 rounded w-full">
+
+			<label for="mobile" class="block mb-2">Mobile Number</label>
+			<input type="tel" id="mobile" class="mb-4 p-2 border border-gray-300 rounded w-full">
+
+			<button type="submit" class="p-2 bg-blue-500 text-white rounded w-full">Save Changes</button>
+		</form>
+		<!-- Logged in as section -->
+		<div id="logged-in-as" class="hidden mt-4 text-gray-600"></div>
+	</div>
+
+	<script type="module" src="edit-profile.js"></script>
+</body>
+</html>

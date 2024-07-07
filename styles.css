@@ -1,0 +1,21 @@
+#message {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+.blue {
+	color: blue;
+}
+
+.lime {
+	color: lime;
+}
+
+.dimmed {
+	opacity: 0.6; /* Dimming effect */
+	pointer-events: none; /* Disable pointer events */
+}
+
+.hidden {
+	display: none;
+}
